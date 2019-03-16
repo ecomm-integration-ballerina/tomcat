@@ -17,4 +17,4 @@ spec:
     name: http               
   selector:
     app: "tomcat"
-type: "NodePort"
+  type: NodePort
