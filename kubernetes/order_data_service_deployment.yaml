@@ -18,7 +18,7 @@ spec:
       maxUnavailable: 1
   template:
     metadata:
-      annotations: []
+      annotations: {}
       finalizers: []
       labels:
         app: "tomcat"
@@ -40,8 +40,8 @@ spec:
         ports:       
         - containerPort: 8080
           name: http      
-        readinessProbe: []
-        livenessProbe: []              
+        readinessProbe: {}
+        livenessProbe: {}         
         volumeMounts: []
       hostAliases: []
       imagePullSecrets: []
