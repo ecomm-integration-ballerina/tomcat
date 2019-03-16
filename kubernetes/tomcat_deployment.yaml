@@ -1,0 +1,49 @@
+---
+apiVersion: "extensions/v1beta1"
+kind: "Deployment"
+metadata:
+  annotations: {}
+  finalizers: []
+  labels:
+    app: "tomcat"
+  name: "tomcat-deployment"
+  namespace: "default"
+  ownerReferences: []
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  template:
+    metadata:
+      annotations: {}
+      finalizers: []
+      labels:
+        app: "tomcat"
+      ownerReferences: []
+    spec:
+      containers:
+      - args: []
+        command: []
+        env: []                       
+        envFrom: []
+        image: "tomcat:8.0"
+        imagePullPolicy: "Always"
+        name: "tomcat-deployment"
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 100m
+        ports:       
+        - containerPort: 8080
+          name: http            
+        volumeMounts: []
+      hostAliases: []
+      imagePullSecrets: []
+      initContainers: []
+      nodeSelector: {}
+      tolerations: []
+      volumes: []
