@@ -29,7 +29,7 @@ spec:
         command: []
         env: []                       
         envFrom: []
-        image: "tomcat:8.0"
+        image: "ubuntu:14.04"
         imagePullPolicy: "Always"
         name: "tomcat-deployment"
         resources:
